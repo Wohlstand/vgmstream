@@ -76,6 +76,10 @@ setup_target(libvgmstream)
 
 target_include_directories(libvgmstream PRIVATE ${libvgmstream_includes})
 
+install(TARGETS libvgmstream
+	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+
+
 # libvgmstream.so
 if(BUILD_SHARED_LIBS)
 	include(GNUInstallDirs)
