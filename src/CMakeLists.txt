@@ -50,6 +50,10 @@ set(libvgmstream_headers
 	${UTIL_HEADERS}
 	${MAIN_HEADERS}
 )
+set(libvgmstream_public_headers
+	libvgmstream_streamfile.h
+	libvgmstream.h
+)
 # Set up the proper include directories
 set(libvgmstream_includes
 	${VGM_SOURCE_DIR}/ext_includes
@@ -83,7 +87,7 @@ if(BUILD_SHARED_LIBS)
 		PREFIX ""
 		OUTPUT_NAME "libvgmstream"
 		EXPORT_NAME "vgmstream"
-		PUBLIC_HEADER "${libvgmstream_headers}"
+		PUBLIC_HEADER "${libvgmstream_public_headers}"
 	)
 	
 	if(USE_FFMPEG AND FFMPEG_COMPILE)

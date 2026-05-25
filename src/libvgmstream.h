@@ -43,7 +43,7 @@
 //LIBVGMSTREAM_API (type) LIBVGMSTREAM_CALL libvgmstream_function(...);
 
 /* external function behavior (for compile time) */
-#if defined(_MSC_VER) || defined(__CYGWIN__)
+#if defined(_WIN32)
     #if defined(LIBVGMSTREAM_EXPORT)
         #define LIBVGMSTREAM_API __declspec(dllexport) /* when exporting/creating vgmstream DLL */
     #elif defined(LIBVGMSTREAM_IMPORT)
